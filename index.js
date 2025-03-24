@@ -55,7 +55,7 @@ app.get("/", (req, res) => {
 
 app.post('/upload', upload.fields([
   { name: 'reference', maxCount: 1 },
-  { name: 'eventPhotos', maxCount: 10 },
+  { name: 'eventPhotos', maxCount: 20 },
 ]), async (req, res) => {
   try {
     const referenceImage = req.files['reference'][0];
