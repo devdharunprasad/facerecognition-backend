@@ -49,6 +49,10 @@ const uploadToS3 = async (file, folder) => {
   };
 };
 
+app.get("/", (req, res) => {
+  res.send("hello")
+})
+
 app.post('/upload', upload.fields([
   { name: 'reference', maxCount: 1 },
   { name: 'eventPhotos', maxCount: 10 },
