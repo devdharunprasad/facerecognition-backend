@@ -15,7 +15,7 @@ const app = express();
 const upload = multer({ dest: 'uploads/' });
 
 app.use(cors({
-  origin: 'http://localhost:5173',
+  origin: ['http://localhost:5173', "https://face-recognitino-vizdale-poc.netlify.app", "*"],
   credentials: true,
 }));
 
